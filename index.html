@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="HM Deutsch: تعلم الألمانية بدروس قصيرة وبطاقات مراجعة وألعاب، مع كلمات من عامية شارع برلين.">
+  <title>HM Deutsch - تعلّم الألمانية</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="brand">HM Deutsch</div>
+    <nav class="nav">
+      <a href="#home" data-view="home">🏠 الرئيسية</a>
+      <a href="#lessons" data-view="lessons">📚 الدروس</a>
+      <a href="#cards" data-view="cards">🃏 البطاقات</a>
+      <a href="#games" data-view="games">🎮 الألعاب</a>
+      <a href="#slang" data-view="slang">🗣️ شارع برلين</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- الرئيسية -->
+    <section id="view-home" class="view">
+      <div class="card hero">
+        <div class="mascot" aria-hidden="true">🐻</div>
+        <div>
+          <h1>تعلّم الألمانية بطريقة ممتعة</h1>
+          <p class="muted">دروس قصيرة، بطاقات مراجعة، ألعاب للأطفال والشباب، وكلمات من الشارع الألماني.</p>
+          <a class="btn primary" href="#lessons">ابدأ الآن</a>
+        </div>
+      </div>
+
+      <div class="stats">
+        <div class="card stat"><b id="statLearned">0</b><span>كلمة متقنة</span></div>
+        <div class="card stat"><b id="statTotal">0</b><span>إجمالي الكلمات</span></div>
+        <div class="card stat"><b id="progressText">0%</b><span>نسبة التقدم</span></div>
+      </div>
+
+      <div class="card">
+        <div class="bar"><span id="progressFill"></span></div>
+      </div>
+
+      <p class="footer">
+        <button id="resetBtn" class="btn small ghost">إعادة ضبط التقدم</button>
+      </p>
+    </section>
+
+    <!-- الدروس -->
+    <section id="view-lessons" class="view">
+      <div id="lessonsWrap"></div>
+    </section>
+
+    <!-- البطاقات -->
+    <section id="view-cards" class="view">
+      <h2>بطاقات المراجعة</h2>
+      <p class="muted">كل جولة 10 بطاقات. إذا عرفت الكلمة ترتفع مرحلتها، وإذا لم تعرفها تعود للمراجعة.</p>
+      <div id="cardBox"></div>
+    </section>
+
+    <!-- الألعاب -->
+    <section id="view-games" class="view">
+      <h2>الألعاب</h2>
+      <div id="gameMenu" class="grid"></div>
+      <div id="gameArea"></div>
+    </section>
+
+    <!-- شارع برلين -->
+    <section id="view-slang" class="view">
+      <h2>شارع برلين: العامية الألمانية</h2>
+      <div class="notice">
+        هذه الكلمات غير رسمية، يستخدمها الشباب مع الأصدقاء. تجنّبها في المقابلات والمدرسة والكتابة الرسمية.
+      </div>
+      <input id="slangSearch" type="search" placeholder="ابحث عن كلمة أو معنى...">
+
+      <h2>عامية الشارع</h2>
+      <div id="slangList" class="grid"></div>
+
+      <h2>لهجة برلين (Berlinerisch)</h2>
+      <p class="muted">لهجة محلية تُكتب بشكل مختلف عن الفصحى، وتسمعها كثيرًا في برلين.</p>
+      <div id="berlinList" class="grid"></div>
+    </section>
+
+  </main>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="data/vocab.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/games.js"></script>
+</body>
+</html>
